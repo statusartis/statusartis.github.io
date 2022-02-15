@@ -1,0 +1,115 @@
+# only when using the default proxy server port - comment out for production
+# local_backend: true
+
+site_url: https://statusartis.gr
+backend:
+  name: git-gateway
+  repo: statusartis/statusartis
+  branch: main
+
+show_preview_links: false # we dont have preview links currently
+
+media_folder: "static" # where uploads are saved
+public_folder: "/" # what is the prefix in the links for images
+
+slug:
+  encoding: "unicode" # default unicode
+  clean_accents: true # remove diacritics
+  sanitize_replacement: "-" # default "-"
+
+collections:
+  # content/greek/αρθρα-blog/arthro-1.md
+  - name: "αρθρα-blog" # Used in routes in admin UI, e.g. /admin/collections/:slug/edit
+    label: "Blog posts GR" # Used in the UI
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/greek/αρθρα-blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{fields.no_accents_slug}}" # Filename template (how filename is generated) <- .md not needed!
+    extension: md
+    format: frontmatter
+    # summary: "{{title}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Title without accents",
+          name: "no_accents_slug",
+          widget: "string",
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - {
+          # will receive new uuid as key upon creation, SHOULD EXIST ONLY ON GREEK (netlify cms) COLLECTIONS!
+          label: "translationKey",
+          name: "translationKey",
+          widget: "hidden",
+          default: "",
+        }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
+        }
+      - {
+          label: "Κατηγοριες-blog",
+          name: "κατηγοριες-blog",
+          widget: "select",
+          multiple: true,
+          options: ["κατασκευη", "ανακαινηση"],
+          default: [],
+          required: false,
+        }
+
+  # content/english/blog-posts/post-1.md
+  - name: "blog-posts"
+    label: "Blog posts EN"
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/english/blog-posts"
+    create: true
+    slug: "{{fields.title}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - {
+          label: "This Post in Greek",
+          name: "translationKey",
+          widget: "relation",
+          collection: "αρθρα-blog",
+          search_fields: ["title", "no_accents_slug"],
+          value_field: "translationKey",
+          display_fields: ["title"],
+        }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
+        }
+      # type is needed to be able to use the template for αρθρα-blog
+      - { label: "Type", name: "type", widget: "hidden", default: "αρθρα-blog" }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "select",
+          multiple: true,
+          options: ["construction", "renovation"],
+          default: [],
+          required: false,
+        }
