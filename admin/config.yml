@@ -36,13 +36,8 @@ collections:
           widget: "string",
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - {
-          label: "Featured Image",
-          name: "thumbnail",
-          widget: "image",
-          required: false,
-        }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - {
           # will receive new uuid as key upon creation, SHOULD EXIST ONLY ON GREEK (netlify cms) COLLECTIONS!
           label: "translationKey",
@@ -78,14 +73,6 @@ collections:
     format: frontmatter
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - {
-          label: "Featured Image",
-          name: "thumbnail",
-          widget: "image",
-          required: false,
-        }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
       - {
           label: "This Post in Greek",
           name: "translationKey",
@@ -95,6 +82,9 @@ collections:
           value_field: "translationKey",
           display_fields: ["title"],
         }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - {
           # hack to avoid showing _index.md in admin editing interface
           label: "visible_in_admin",
@@ -112,4 +102,78 @@ collections:
           options: ["construction", "renovation"],
           default: [],
           required: false,
+        }
+
+  # content/greek/υπηρεσιες/υπηρεσια-1.md
+  - name: "υπηρεσιες"
+    label: "Services GR"
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/greek/υπηρεσιες"
+    create: true
+    slug: "{{fields.no_accents_slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Title without accents",
+          name: "no_accents_slug",
+          widget: "string",
+        }
+      - {
+          label: "Order in lists (weight)",
+          name: "weight",
+          widget: "number",
+          min: 1,
+          hint: "Lower numbers appear first (on top)",
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Banner text", name: "banner_text", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
+        }
+
+  # content/english/services/service-1.md
+  - name: "services"
+    label: "Services EN"
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/english/services"
+    create: true
+    slug: "{{fields.title}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "This Service in Greek",
+          name: "translationKey",
+          widget: "relation",
+          collection: "υπηρεσιες",
+          search_fields: ["title", "no_accents_slug"],
+          value_field: "translationKey",
+          display_fields: ["title"],
+        }
+      - {
+          label: "Order in lists (weight)",
+          name: "weight",
+          widget: "number",
+          min: 1,
+          hint: "Lower numbers appear first (on top)",
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Banner text", name: "banner_text", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
         }
