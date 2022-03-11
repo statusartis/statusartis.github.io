@@ -33,6 +33,9 @@
       // plugins: [..., lgThumbnail, ...] will add thumbnails
       // but the current implementation downloads fallback images as thumbs, worsens lighthouse scores
       plugins: [lgFullscreen, lgZoom],
+      // enableDrag: false, // disable mouse swipes on desktop
+      mobileSettings: { controls: true, showCloseIcon: true, download: false },
+      enableSwipe: false, // disable swipes on mobile (buggy)
       getCaptionFromTitleOrAlt: false, // do not show alt text as captions when viewing picture in gallery
       download: false, // disable download button
       // speed: 200,
