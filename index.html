@@ -8,54 +8,69 @@
 <title>Status Artis</title>
 <link rel=preconnect href=https://fonts.googleapis.com>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel=stylesheet>
-<link rel=stylesheet href=/assets/css/style.min.85040693b69643e38c81f426d40727d9f76878e54f1f3c2a2b31768af57f571d.css integrity='"sha256-hQQGk7aWQ+OMgfQm1Acn2fdoeOVPHzwqKzF2ivV/Vx0="'>
-<script defer async src=/js/custom.js></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css integrity="sha256-1gtpcmuOA//0xcazytnM9JqBM3mUDWgwqW1P9U+2/F8=" crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/style.min.58250d05c04067889e0bed3dcdd79a38a7a9225d2e5a7ebb8e1ea7f51a108417.css integrity='"sha256-WCUNBcBAZ4ieC+09zdeaOKepIl0uWn67jh6n9RoQhBc="'>
+<script defer src=/js/lightgallery-2.4.0.min.js></script>
+<script defer src=/js/lg-fullscreen-2.4.0.min.js></script>
+<script defer src=/js/lg-zoom-2.4.0.min.js></script>
+<script defer src=/js/custom.js></script>
 <link rel=alternate type=application/rss+xml href=/index.xml title="Status Artis">
 </head>
-<body><header class=container-fluid>
+<body><header class=container-fluid data-theme=dark>
 <input class=invisible-checkbox type=checkbox id=is-mobile-menu-expanded>
 <nav class=navigation>
 <ul class=top-level-menu>
 <li class=logo>
 <a href=/>
-<img class=logo src=/logo-placeholder.jpg alt="Status Artis Logo">
+<img class=logo src=/logo-placeholder.svg alt="Status Artis Logo">
 </a>
 </li>
-<li>
+<li class=hamb-parent>
 <label class=hamb for=is-mobile-menu-expanded><span class=hamb-line></span></label>
 </li>
-<li class=menu-entry><a href="/ποιοι ειμαστε">Ποιοι ειμαστε</a></li>
+<li class=centered-part>
+<ul>
 <li class="menu-entry dropdown-hover">
 <details>
 <summary>Υπηρεσιες</summary>
 <ul>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B5%CE%B3%CE%B5p%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>Ανέγερση οικίας</a>
+<a href=/υπηρεσιες/>γενικα</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B1%CE%BA%CE%B1%CE%B9%CE%BD%CE%B7%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>Ανακαίνηση οικίας</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B5%CE%B3%CE%B5p%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>ανεγερση οικιας</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CF%85%CE%B4p%CE%B1%CF%85%CE%BB%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>Υδραυλικές εργασίες</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B1%CE%BA%CE%B1%CE%B9%CE%BD%CE%B7%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>ανακαινηση οικιας</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84p%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>Ηλεκτρολογικές εργασίες</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CF%85%CE%B4p%CE%B1%CF%85%CE%BB%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>υδραυλικες εργασιες</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%BD%CE%B5p%CE%B3%CE%B5%CE%B9%CE%B1%CE%BA%CE%B7-%CE%B1%CE%BD%CE%B1%CE%B2%CE%B1%CE%B8%CE%BC%CE%B9%CF%83%CE%B7/>Ενεργειακή αναβάθμιση</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84p%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>ηλεκτρολογικες εργασιες</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%B9%CE%B4%CE%B9%CE%BA%CE%B5%CF%82-%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%B5%CF%82/>Ειδικές κατασκευές</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%BD%CE%B5p%CE%B3%CE%B5%CE%B9%CE%B1%CE%BA%CE%B7-%CE%B1%CE%BD%CE%B1%CE%B2%CE%B1%CE%B8%CE%BC%CE%B9%CF%83%CE%B7/>ενεργειακη αναβαθμιση</a>
+</li>
+<li>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%B9%CE%B4%CE%B9%CE%BA%CE%B5%CF%82-%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%B5%CF%82/>ειδικες κατασκευες</a>
 </li>
 </ul>
 </details>
 </li>
 <li class=menu-entry><a href=/εργα>Εργα</a></li>
-<li class=menu-entry><a href=/προτασεις>Προτασεις</a></li>
+<li class=menu-entry>
+<a href=/σχεδιαστικες-προτασεις/>Προτασεις</a>
+</li>
 <li class=menu-entry><a href=/αρθρα-blog>Blog</a></li>
 <li class=menu-entry>
 <a role=button class=outline href=/επικοινωνια>Επικοινωνια</a>
+</li>
+<li class="menu-entry search">
+<a href=/><img class=my-inverted-colors src=/icon-search.svg alt=search></a>
+</li>
+</ul>
 </li>
 <li class=menu-entry>
 <a href=/en/>EN</a>
@@ -63,10 +78,18 @@
 </ul>
 </nav>
 </header>
-<main class=content>
-<div class="hero main">
-<h4 class=hero-text>Στην αιχμή της κατασκευαστικής τεχνολογίας</h4>
-</div>
+<main class="content front-page">
+<figure class=hero>
+<picture>
+<source type=image/webp srcset="/static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_480x0_resize_q75_h2_box.webp 480w,
+/static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_640x0_resize_q75_h2_box.webp 640w,
+/static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_800x0_resize_q75_h2_box.webp 800w,
+/static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_1080x0_resize_q75_h2_box.webp 1080w,
+/static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_1366x0_resize_q75_h2_box.webp 1366w">
+<img width=1080 height=716 src=/static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_1080x0_resize_q75_box.jpg srcset="/static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_480x0_resize_q75_box.jpg 480w, /static/house-big1_hu21586e8f8940841627927869ddab11de_2066326_1080x0_resize_q75_h2_box.webp 1080w" alt="κτηριο υψηλης τεχνολογιας" loading=eager decoding=async>
+</picture>
+<figcaption>Στην αιχμή της κατασκευαστικής τεχνολογίας</figcaption>
+</figure>
 <p class="introduction container">
 Η <strong>Status Artis</strong> είναι μια εταιρεία που δραστηριοποιείται
 στον κατασκευαστικό τομέα στην ευρύτερη περιοχή των Χανίων. Με πάνω από 15
@@ -110,64 +133,65 @@
 </li>
 </ul>
 </div>
+<div class="container front-page-gallery">
+<h2>Προτάσεις</h2>
+<p>
+Δείτε παρακάτω επιλεγμένες προτάσεις σχεδιασμού εσωτερικών χώρων. Για να
+δείτε όλες τις προτάσεις μας πατήστε
+<a href=/σχεδιαστικες-προτασεις/>εδώ</a>.
+</p>
+<div class=my-gallery>
+<a data-src=/static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_480x0_resize_q75_h2_box.webp 480w, /static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_640x0_resize_q75_h2_box.webp 640w, /static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_800x0_resize_q75_h2_box.webp 800w, /static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_1080x0_resize_q75_h2_box.webp 1080w, /static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=720 src=/static/living-room2_hu9d0867af12fa56e3b7b1251f0a4b9725_321347_480x0_resize_q75_box.jpg alt="alt gr" loading=lazy decoding=async>
+</picture>
+</a>
+<a data-src=/static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_480x0_resize_q75_h2_box.webp 480w, /static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_640x0_resize_q75_h2_box.webp 640w, /static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_800x0_resize_q75_h2_box.webp 800w, /static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_1080x0_resize_q75_h2_box.webp 1080w, /static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=720 src=/static/living-room3_huebd01eeb6330caaa649ccecdb2eeeb8d_358685_480x0_resize_q75_box.jpg alt loading=lazy decoding=async>
+</picture>
+</a>
+<a data-src=/static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_480x0_resize_q75_h2_box.webp 480w, /static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_640x0_resize_q75_h2_box.webp 640w, /static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_800x0_resize_q75_h2_box.webp 800w, /static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_1080x0_resize_q75_h2_box.webp 1080w, /static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=717 src=/static/kitchen1_hu8ee1daa7bde67c115ed53edcc2ed5f89_237412_480x0_resize_q75_box.jpg alt loading=lazy decoding=async>
+</picture>
+</a>
+<a data-src=/static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_480x0_resize_q75_h2_box.webp 480w, /static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_640x0_resize_q75_h2_box.webp 640w, /static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_800x0_resize_q75_h2_box.webp 800w, /static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_1080x0_resize_q75_h2_box.webp 1080w, /static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=720 src=/static/kitchen2_hu5d862c2599659fedecb532663bec3721_261536_480x0_resize_q75_box.jpg alt loading=lazy decoding=async>
+</picture>
+</a>
+<a data-src=/static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_480x0_resize_q75_h2_box.webp 480w, /static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_640x0_resize_q75_h2_box.webp 640w, /static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_800x0_resize_q75_h2_box.webp 800w, /static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_1080x0_resize_q75_h2_box.webp 1080w, /static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=731 src=/static/bedroom1_hu58fe2a1858b69cee83fceb131da8b4d6_473115_480x0_resize_q75_box.jpg alt loading=lazy decoding=async>
+</picture>
+</a>
+<a data-src=/static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_480x0_resize_q75_h2_box.webp 480w, /static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_640x0_resize_q75_h2_box.webp 640w, /static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_800x0_resize_q75_h2_box.webp 800w, /static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_1080x0_resize_q75_h2_box.webp 1080w, /static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=720 src=/static/bedroom2_huffe230571b1115d64dbb9eb90c0b8a34_238447_480x0_resize_q75_box.jpg alt loading=lazy decoding=async>
+</picture>
+</a>
+<a data-src=/static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_480x0_resize_q75_h2_box.webp 480w, /static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_640x0_resize_q75_h2_box.webp 640w, /static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_800x0_resize_q75_h2_box.webp 800w, /static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_1080x0_resize_q75_h2_box.webp 1080w, /static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=720 src=/static/bathroom1_huf8e43cb63d1d3334cee4512dc2158d44_288298_480x0_resize_q75_box.jpg alt loading=lazy decoding=async>
+</picture>
+</a>
+<a data-src=/static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_1080x0_resize_q75_box.jpg data-sources='[{ "srcset": " /static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_480x0_resize_q75_h2_box.webp 480w, /static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_640x0_resize_q75_h2_box.webp 640w, /static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_800x0_resize_q75_h2_box.webp 800w, /static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_1080x0_resize_q75_h2_box.webp 1080w, /static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_1366x0_resize_q75_h2_box.webp 1366w", "type": "image/webp" }]'>
+<picture>
+<source type=image/webp srcset="/static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_480x0_resize_q75_h2_box.webp 480w">
+<img width=1080 height=720 src=/static/bathroom2_hufd4b88cfd77d9d4770a6a23bf1a377c5_301531_480x0_resize_q75_box.jpg alt loading=lazy decoding=async>
+</picture>
+</a>
+</div>
+</div>
 <div class=container>
-<h2>Οι υπηρεσίες μας</h2>
-<div class=services>
-<div class=service>
-<img src=/construction-site1.jpg>
-<div>
-<h4>Ανέγερση οικίας</h4>
-<strong>Lorem Ipsum</strong> is simply <em>dummy text</em> of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B5%CE%B3%CE%B5p%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>
-Περισσότερα για ανέγερση οικίας</a>
-</div>
-</div>
-<div class=service>
-<img src=/renovation-1.jpg>
-<div>
-<h4>Ανακαίνηση οικίας</h4>
-<strong>Lorem Ipsum</strong> is simply <em>dummy text</em> of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B1%CE%BA%CE%B1%CE%B9%CE%BD%CE%B7%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>
-Περισσότερα για ανακαίνηση οικίας</a>
-</div>
-</div>
-<div class=service>
-<img src=/plumbing1.jpg>
-<div>
-<h4>Υδραυλικές εργασίες</h4>
-<strong>Lorem Ipsum</strong> is simply <em>dummy text</em> of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CF%85%CE%B4p%CE%B1%CF%85%CE%BB%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>
-Περισσότερα για υδραυλικές εργασίες</a>
-</div>
-</div>
-<div class=service>
-<img src=/electrical-work.jpg>
-<div>
-<h4>Ηλεκτρολογικές εργασίες</h4>
-<strong>Lorem Ipsum</strong> is simply <em>dummy text</em> of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84p%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>
-Περισσότερα για ηλεκτρολογικές εργασίες</a>
-</div>
-</div>
-<div class=service>
-<img src=/insulation-1.jpg>
-<div>
-<h4>Ενεργειακή αναβάθμιση</h4>
-<strong>Lorem Ipsum</strong> is simply <em>dummy text</em> of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%BD%CE%B5p%CE%B3%CE%B5%CE%B9%CE%B1%CE%BA%CE%B7-%CE%B1%CE%BD%CE%B1%CE%B2%CE%B1%CE%B8%CE%BC%CE%B9%CF%83%CE%B7/>
-Περισσότερα για ενεργειακή αναβάθμιση</a>
-</div>
-</div>
-<div class=service>
-<img src=/custom-design-cnc-machine.jpg>
-<div>
-<h4>Ειδικές κατασκευές</h4>
-<strong>Lorem Ipsum</strong> is simply <em>dummy text</em> of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%B9%CE%B4%CE%B9%CE%BA%CE%B5%CF%82-%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%B5%CF%82/>
-Περισσότερα για ειδικές κατασκευές</a>
-</div>
-</div>
-</div>
 </div>
 </main>
 <footer class="container-fluid footer">

@@ -129,6 +129,12 @@ collections:
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Featured Image Alt Text",
+          name: "thumbnail_alt",
+          widget: "string",
+          required: false,
+        }
       - { label: "Banner text", name: "banner_text", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
@@ -168,8 +174,123 @@ collections:
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Featured Image Alt Text",
+          name: "thumbnail_alt",
+          widget: "string",
+          required: false,
+        }
       - { label: "Banner text", name: "banner_text", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
+      # type is needed to be able to auto-match with different template
+      - { label: "Type", name: "type", widget: "hidden", default: "υπηρεσιες" }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
+        }
+
+  # content/greek/σχεδιαστικες-προτασεις/σαλονι.md
+  - name: "σχεδιαστικες-προτασεις"
+    label: "Design proposals GR"
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/greek/σχεδιαστικες-προτασεις"
+    # todo: change to create: false
+    create: true
+    slug: "{{fields.no_accents_slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Title without accents",
+          name: "no_accents_slug",
+          widget: "string",
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Order in lists (weight)",
+          name: "weight",
+          widget: "number",
+          min: 1,
+          hint: "Lower numbers appear first (on top)",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
+        }
+      - {
+          label: "Gallery",
+          label_singular: "Image",
+          name: "gallery",
+          widget: "list",
+          allow_add: true,
+          default: [],
+          hint: "The gallery will be shown in both GR and EN pages",
+          fields:
+            [
+              { label: "Image", name: "image", widget: "image" },
+              {
+                label: "Alt text GR",
+                name: "alt_gr",
+                widget: "string",
+                required: false,
+                default: "",
+              },
+              {
+                label: "Alt text EN",
+                name: "alt_en",
+                widget: "string",
+                required: false,
+                default: "",
+              },
+              {
+                label: "Featured",
+                name: "featured",
+                widget: "boolean",
+                default: false,
+                required: false,
+                hint: "If checked, the image will appear in the front page gallery too",
+              },
+            ],
+        }
+
+  # content/english/design-proposal/living-room.md
+  - name: "design-proposals"
+    label: "Design proposals EN"
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/english/design-proposals"
+    # todo: change to create: false
+    create: true
+    slug: "{{fields.title}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "This Proposal in Greek",
+          name: "translationKey",
+          widget: "relation",
+          collection: "σχεδιαστικες-προτασεις",
+          search_fields: ["title", "no_accents_slug"],
+          value_field: "translationKey",
+          display_fields: ["title"],
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      # type is needed to be able to auto-match with different template
+      - {
+          label: "Type",
+          name: "type",
+          widget: "hidden",
+          default: "σχεδιαστικες-προτασεις",
+        }
       - {
           # hack to avoid showing _index.md in admin editing interface
           label: "visible_in_admin",

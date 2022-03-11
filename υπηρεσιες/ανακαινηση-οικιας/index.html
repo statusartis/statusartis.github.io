@@ -8,53 +8,68 @@
 Status Artis</title>
 <link rel=preconnect href=https://fonts.googleapis.com>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel=stylesheet>
-<link rel=stylesheet href=/assets/css/style.min.85040693b69643e38c81f426d40727d9f76878e54f1f3c2a2b31768af57f571d.css integrity='"sha256-hQQGk7aWQ+OMgfQm1Acn2fdoeOVPHzwqKzF2ivV/Vx0="'>
-<script defer async src=/js/custom.js></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css integrity="sha256-1gtpcmuOA//0xcazytnM9JqBM3mUDWgwqW1P9U+2/F8=" crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/style.min.58250d05c04067889e0bed3dcdd79a38a7a9225d2e5a7ebb8e1ea7f51a108417.css integrity='"sha256-WCUNBcBAZ4ieC+09zdeaOKepIl0uWn67jh6n9RoQhBc="'>
+<script defer src=/js/lightgallery-2.4.0.min.js></script>
+<script defer src=/js/lg-fullscreen-2.4.0.min.js></script>
+<script defer src=/js/lg-zoom-2.4.0.min.js></script>
+<script defer src=/js/custom.js></script>
 </head>
-<body><header class=container-fluid>
+<body><header class=container-fluid data-theme=dark>
 <input class=invisible-checkbox type=checkbox id=is-mobile-menu-expanded>
 <nav class=navigation>
 <ul class=top-level-menu>
 <li class=logo>
 <a href=/>
-<img class=logo src=/logo-placeholder.jpg alt="Status Artis Logo">
+<img class=logo src=/logo-placeholder.svg alt="Status Artis Logo">
 </a>
 </li>
-<li>
+<li class=hamb-parent>
 <label class=hamb for=is-mobile-menu-expanded><span class=hamb-line></span></label>
 </li>
-<li class=menu-entry><a href="/ποιοι ειμαστε">Ποιοι ειμαστε</a></li>
+<li class=centered-part>
+<ul>
 <li class="menu-entry dropdown-hover">
 <details>
 <summary>Υπηρεσιες</summary>
 <ul>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B5%CE%B3%CE%B5p%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>Ανέγερση οικίας</a>
+<a href=/υπηρεσιες/>γενικα</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B1%CE%BA%CE%B1%CE%B9%CE%BD%CE%B7%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>Ανακαίνηση οικίας</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B5%CE%B3%CE%B5p%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>ανεγερση οικιας</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CF%85%CE%B4p%CE%B1%CF%85%CE%BB%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>Υδραυλικές εργασίες</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B1%CE%BD%CE%B1%CE%BA%CE%B1%CE%B9%CE%BD%CE%B7%CF%83%CE%B7-%CE%BF%CE%B9%CE%BA%CE%B9%CE%B1%CF%82/>ανακαινηση οικιας</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84p%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>Ηλεκτρολογικές εργασίες</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CF%85%CE%B4p%CE%B1%CF%85%CE%BB%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>υδραυλικες εργασιες</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%BD%CE%B5p%CE%B3%CE%B5%CE%B9%CE%B1%CE%BA%CE%B7-%CE%B1%CE%BD%CE%B1%CE%B2%CE%B1%CE%B8%CE%BC%CE%B9%CF%83%CE%B7/>Ενεργειακή αναβάθμιση</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84p%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%B5%CF%82-%CE%B5p%CE%B3%CE%B1%CF%83%CE%B9%CE%B5%CF%82/>ηλεκτρολογικες εργασιες</a>
 </li>
 <li>
-<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%B9%CE%B4%CE%B9%CE%BA%CE%B5%CF%82-%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%B5%CF%82/>Ειδικές κατασκευές</a>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%BD%CE%B5p%CE%B3%CE%B5%CE%B9%CE%B1%CE%BA%CE%B7-%CE%B1%CE%BD%CE%B1%CE%B2%CE%B1%CE%B8%CE%BC%CE%B9%CF%83%CE%B7/>ενεργειακη αναβαθμιση</a>
+</li>
+<li>
+<a href=/%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%B9%CE%B5%CF%82/%CE%B5%CE%B9%CE%B4%CE%B9%CE%BA%CE%B5%CF%82-%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%B5%CF%82/>ειδικες κατασκευες</a>
 </li>
 </ul>
 </details>
 </li>
 <li class=menu-entry><a href=/εργα>Εργα</a></li>
-<li class=menu-entry><a href=/προτασεις>Προτασεις</a></li>
+<li class=menu-entry>
+<a href=/σχεδιαστικες-προτασεις/>Προτασεις</a>
+</li>
 <li class=menu-entry><a href=/αρθρα-blog>Blog</a></li>
 <li class=menu-entry>
 <a role=button class=outline href=/επικοινωνια>Επικοινωνια</a>
+</li>
+<li class="menu-entry search">
+<a href=/><img class=my-inverted-colors src=/icon-search.svg alt=search></a>
+</li>
+</ul>
 </li>
 <li class=menu-entry>
 <a href=/en/services/house-renovation/>EN</a>
