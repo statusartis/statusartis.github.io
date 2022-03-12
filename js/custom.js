@@ -32,13 +32,18 @@
     window.lightGallery(gallery, {
       // plugins: [..., lgThumbnail, ...] will add thumbnails
       // but the current implementation downloads fallback images as thumbs, worsens lighthouse scores
-      plugins: [lgFullscreen, lgZoom],
+      plugins: [lgFullscreen, lgThumbnail, lgZoom],
       // enableDrag: false, // disable mouse swipes on desktop
       mobileSettings: { controls: true, showCloseIcon: true, download: false },
       enableSwipe: false, // disable swipes on mobile (buggy)
+      swipeToClose: true, // still active on desktop
+      // closeOnTap: false,
       getCaptionFromTitleOrAlt: false, // do not show alt text as captions when viewing picture in gallery
       download: false, // disable download button
-      // speed: 200,
+      speed: 500,
+      supportLegacyBrowser: false,
+      swipeThreshold: 30,
+      exThumbImage: "data-my-thumb-image", // force webp thumbnail, otherwise will get jpegs
     });
   }
 })();
