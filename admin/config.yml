@@ -202,6 +202,8 @@ collections:
     slug: "{{fields.no_accents_slug}}"
     extension: md
     format: frontmatter
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
@@ -271,6 +273,8 @@ collections:
     slug: "{{fields.title}}"
     extension: md
     format: frontmatter
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
