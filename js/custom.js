@@ -47,3 +47,8 @@
     });
   }
 })();
+
+// window.onload = function () {
+//   const iframe = document.getElementById("contact-form");
+//   iframe.scrolling = "no";
+// };
