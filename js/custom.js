@@ -32,7 +32,7 @@
     window.lightGallery(gallery, {
       // plugins: [..., lgThumbnail, ...] will add thumbnails
       // but the current implementation downloads fallback images as thumbs, worsens lighthouse scores
-      plugins: [lgFullscreen, lgThumbnail, lgZoom],
+      plugins: [lgFullscreen, lgThumbnail],
       // enableDrag: false, // disable mouse swipes on desktop
       mobileSettings: { controls: true, showCloseIcon: true, download: false },
       enableSwipe: true,
