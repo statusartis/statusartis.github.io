@@ -57,7 +57,7 @@ collections:
           name: "κατηγοριες-blog",
           widget: "select",
           multiple: true,
-          options: ["κατασκευη", "ανακαινηση"],
+          options: ["κατασκευη", "ανακαινιση"],
           default: [],
           required: false,
         }
@@ -295,6 +295,106 @@ collections:
           widget: "hidden",
           default: "σχεδιαστικες-προτασεις",
         }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
+        }
+
+  # content/greek/εργα/ανακαινιση-οικιας-χανια.md
+  - name: "εργα"
+    label: "Projects GR"
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/greek/εργα"
+    # todo: change to create: false
+    create: true
+    slug: "{{fields.no_accents_slug}}"
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Title without accents",
+          name: "no_accents_slug",
+          widget: "string",
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Order in lists (weight)",
+          name: "weight",
+          widget: "number",
+          min: 1,
+          hint: "Lower numbers appear first (on top)",
+        }
+      # not showing body widget, since currently we only show projects as the cumulative gallery
+      # - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          # hack to avoid showing _index.md in admin editing interface
+          label: "visible_in_admin",
+          name: "visible_in_admin",
+          widget: "hidden",
+          default: true,
+        }
+      - {
+          label: "Gallery",
+          label_singular: "Image",
+          name: "gallery",
+          widget: "list",
+          allow_add: true,
+          default: [],
+          hint: "The gallery will be shown in both GR and EN pages",
+          fields:
+            [
+              { label: "Image", name: "image", widget: "image" },
+              {
+                label: "Alt text GR",
+                name: "alt_gr",
+                widget: "string",
+                required: false,
+                default: "",
+              },
+              {
+                label: "Alt text EN",
+                name: "alt_en",
+                widget: "string",
+                required: false,
+                default: "",
+              },
+            ],
+        }
+
+  # content/english/projects/house-renovation-chania.md
+  - name: "projects"
+    label: "Projects EN"
+    filter: { field: "visible_in_admin", value: true }
+    folder: "content/english/projects"
+    # todo: change to create: false
+    create: true
+    slug: "{{fields.title}}"
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "This Project in Greek",
+          name: "translationKey",
+          widget: "relation",
+          collection: "εργα",
+          search_fields: ["title", "no_accents_slug"],
+          value_field: "translationKey",
+          display_fields: ["title"],
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      # not showing body widget, since currently we only show projects as the cumulative gallery
+      # - { label: "Body", name: "body", widget: "markdown" }
+      # type is needed to be able to auto-match with different template
+      - { label: "Type", name: "type", widget: "hidden", default: "εργα" }
       - {
           # hack to avoid showing _index.md in admin editing interface
           label: "visible_in_admin",
