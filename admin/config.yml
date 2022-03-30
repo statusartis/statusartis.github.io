@@ -37,6 +37,12 @@ collections:
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Featured Image Alt Text",
+          name: "thumbnail_alt",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           # will receive new uuid as key upon creation, SHOULD EXIST ONLY ON GREEK (netlify cms) COLLECTIONS!
@@ -84,6 +90,12 @@ collections:
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Featured Image Alt Text",
+          name: "thumbnail_alt",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           # hack to avoid showing _index.md in admin editing interface
