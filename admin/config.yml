@@ -460,3 +460,85 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
+
+  # content/english/_index.md
+  # content/greek/_index.md
+  - name: "main-page"
+    label: "Main page"
+    editor:
+      preview: false
+    files:
+      - label: "Main page EN"
+        name: "main-page-en"
+        file: "content/english/_index.md"
+        preview: false
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "Why Us",
+              label_singular: "Entry (bullet)",
+              name: "why_us",
+              widget: "list",
+              allow_add: true,
+              default: [],
+              fields:
+                [
+                  {
+                    label: "Image",
+                    name: "image",
+                    widget: "image",
+                    hint: "Will be used instead of the bullet",
+                  },
+                  {
+                    label: "Alt text for the image",
+                    name: "alt",
+                    widget: "string",
+                    required: false,
+                    default: "",
+                  },
+                  {
+                    label: "Bullet text",
+                    name: "why_us_bullet_text",
+                    widget: "markdown",
+                    hint: "This text will appear after the bullet image",
+                  },
+                ],
+            }
+      - label: "Main page GR"
+        name: "main-page-gr"
+        file: "content/greek/_index.md"
+        preview: false
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "Why Us",
+              label_singular: "Entry (bullet)",
+              name: "why_us",
+              widget: "list",
+              allow_add: true,
+              default: [],
+              fields:
+                [
+                  {
+                    label: "Image",
+                    name: "image",
+                    widget: "image",
+                    hint: "Will be used instead of the bullet",
+                  },
+                  {
+                    label: "Alt text for the image",
+                    name: "alt",
+                    widget: "string",
+                    required: false,
+                    default: "",
+                  },
+                  {
+                    label: "Bullet text",
+                    name: "why_us_bullet_text",
+                    widget: "markdown",
+                    hint: "This text will appear after the bullet image",
+                  },
+                ],
+            }
