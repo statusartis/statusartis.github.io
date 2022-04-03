@@ -414,3 +414,49 @@ collections:
           widget: "hidden",
           default: true,
         }
+
+  # content/english/privacy-policy.md
+  # content/greek/πολιτικη-απορρητου.md
+  - name: "privacy-policy"
+    label: "Privacy policy"
+    files:
+      - label: "Privacy policy EN"
+        name: "privacy-policy-en"
+        file: "content/english/privacy-policy.md"
+        # format: frontmatter
+        # editor:
+        # preview: true
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Privacy policy GR"
+        name: "privacy-policy-gr"
+        file: "content/greek/πολιτικη-απορρητου.md"
+        # format: frontmatter
+        # editor:
+        # preview: true
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "cookie-policy"
+    label: "Cookie policy"
+    files:
+      - label: "Cookie policy EN"
+        name: "cookie-policy-en"
+        file: "content/english/cookie-policy.md"
+        # format: frontmatter
+        # editor:
+        # preview: true
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Cookie policy GR"
+        name: "cookie-policy-gr"
+        file: "content/greek/πολιτικη-cookies.md"
+        # format: frontmatter
+        # editor:
+        # preview: true
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
