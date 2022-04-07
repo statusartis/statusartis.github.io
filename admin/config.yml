@@ -468,12 +468,28 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Main page EN"
-        name: "main-page-en"
-        file: "content/english/_index.md"
+      - label: "Main page GR"
+        name: "main-page-gr"
+        file: "content/greek/_index.md"
         preview: false
         fields:
           - { label: Title, name: title, widget: string }
+          - {
+              label: "Logo (for both greek and english)",
+              name: logo,
+              widget: image,
+            }
+          - { label: "Featured Image", name: featured_image, widget: image }
+          - {
+              label: "Featured Image Alt Text",
+              name: featured_image_alt,
+              widget: string,
+            }
+          - {
+              label: "Hero text (Motto on the image)",
+              name: hero_text,
+              widget: string,
+            }
           - { label: "Body", name: "body", widget: "markdown" }
           - {
               label: "Why Us",
@@ -505,12 +521,23 @@ collections:
                   },
                 ],
             }
-      - label: "Main page GR"
-        name: "main-page-gr"
-        file: "content/greek/_index.md"
+      - label: "Main page EN"
+        name: "main-page-en"
+        file: "content/english/_index.md"
         preview: false
         fields:
           - { label: Title, name: title, widget: string }
+          - { label: "Featured Image", name: featured_image, widget: image }
+          - {
+              label: "Featured Image Alt Text",
+              name: featured_image_alt,
+              widget: string,
+            }
+          - {
+              label: "Hero text (Motto on the image)",
+              name: hero_text,
+              widget: string,
+            }
           - { label: "Body", name: "body", widget: "markdown" }
           - {
               label: "Why Us",
