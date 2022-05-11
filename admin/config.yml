@@ -150,6 +150,33 @@ collections:
       - { label: "Banner text", name: "banner_text", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
+          label: "Gallery",
+          label_singular: "Image",
+          name: "gallery",
+          widget: "list",
+          allow_add: true,
+          default: [],
+          hint: "The gallery will be shown in both GR and EN pages",
+          fields:
+            [
+              { label: "Image", name: "image", widget: "image" },
+              {
+                label: "Alt text GR",
+                name: "alt_gr",
+                widget: "string",
+                required: false,
+                default: "",
+              },
+              {
+                label: "Alt text EN",
+                name: "alt_en",
+                widget: "string",
+                required: false,
+                default: "",
+              },
+            ],
+        }
+      - {
           # hack to avoid showing _index.md in admin editing interface
           label: "visible_in_admin",
           name: "visible_in_admin",
