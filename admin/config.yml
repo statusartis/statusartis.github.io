@@ -14,7 +14,7 @@ public_folder: "/" # what is the prefix in the links for images
 
 slug:
   encoding: "unicode" # default unicode
-  clean_accents: true # remove diacritics
+  clean_accents: false # setting to false, due to a bug: greek letter ro "ρ" gets transformed to latin "p", messing up SEO, maybe there are more unexpected things too
   sanitize_replacement: "-" # default "-"
 
 collections:
@@ -377,6 +377,20 @@ collections:
           name: "visible_in_admin",
           widget: "hidden",
           default: true,
+        }
+      - {
+          label: "Κατηγορια-εργου",
+          name: "project_category",
+          widget: "select",
+          multiple: false,
+          options:
+            [
+              "εξωτερικοι-χωροι",
+              "σαλονι",
+              "κουζινα",
+              "κρεββατοκαμαρα",
+              "λουτρο",
+            ],
         }
       - {
           label: "Gallery",
