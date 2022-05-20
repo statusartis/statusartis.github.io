@@ -125,6 +125,7 @@ collections:
     slug: "{{fields.no_accents_slug}}"
     extension: md
     format: frontmatter
+    sortable_fields: ["weight"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
@@ -193,6 +194,7 @@ collections:
     slug: "{{fields.title}}"
     extension: md
     format: frontmatter
+    sortable_fields: ["weight"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
@@ -243,6 +245,7 @@ collections:
     format: frontmatter
     editor:
       preview: false
+    sortable_fields: ["weight"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
@@ -354,6 +357,7 @@ collections:
     format: frontmatter
     editor:
       preview: false
+    sortable_fields: ["weight"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
