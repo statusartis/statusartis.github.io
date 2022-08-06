@@ -359,6 +359,13 @@ collections:
       preview: false
     sortable_fields: ["weight"]
     fields:
+      - {
+          # do not include per-project pages in sitemaps (currently there is no content there anyway and google will mark them as too similar)
+          label: "sitemapExclude",
+          name: "sitemapExclude",
+          widget: "hidden",
+          default: true,
+        }
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Title without accents",
@@ -437,6 +444,13 @@ collections:
     editor:
       preview: false
     fields:
+      - {
+          # do not include per-project pages in sitemaps (currently there is no content there anyway and google will mark them as too similar)
+          label: "sitemapExclude",
+          name: "sitemapExclude",
+          widget: "hidden",
+          default: true,
+        }
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "This Project in Greek",
